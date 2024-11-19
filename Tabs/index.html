@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tabs</title>
+</head>
+<body>
+    <div class="container">
+        <div class="tab">
+            <button class="tabLinks" data-tab="tab1">Tab 1</button>
+            <button class="tabLinks" data-tab="tab2">Tab 2</button>
+            <button class="tabLinks" data-tab="tab3">Tab 3</button>
+        </div>
+        <div id="tab1" class="tabContent">
+            <h2>Tab 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, 
+                a perferendis? Necessitatibus eligendi dolores consequatur facilis
+                unde perferendis
+                voluptates repellat sed exercitationem ratione quas velit,
+                vel, accusamus et dolor quam.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Est, quis magni quidem accusamus sequi tempora? Quae animi expedita velit sit.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, repellendus rem? Consectetur
+                         in dolor quas earum, fuga ullam. Distinctio consequuntur 
+                        fugit minima placeat error quam nihil cupiditate itaque, iste obcaecati!</p>
+        </div>
+    
+        <div id="tab2" class="tabContent">
+            <h2>Tab 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, 
+                </p>
+        </div>
+    
+        <div id="tab3" class="tabContent">
+            <h2>Tab 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Optio ipsa perferendis eaque est accusantium vel, saepe,
+                 quidem culpa modi aut id. Expedita, eos tempora. Cum, a quaerat quibusdam animi 
+                voluptates molestias autem sint natus ullam. Provident, consequatur excepturi! Culpa, nostrum.</p>
+        </div>
+    </div>
+
+    <script>
+        const tabButton = document.querySelectorAll(".tabLinks");
+
+        for(var i=0; i<tabButton.length; i++){
+            tabButton[i].addEventListener('click',function(){
+                var tabName = this.dataset.tab;
+                var tabContent = document.getElementById(tabName);
+
+
+                var allTabContent = document.querySelectorAll(".tabContent");
+                var allTabButton = document.querySelectorAll(".tabLinks");
+
+                for(var j=0; j<allTabContent.length; j++){
+                    allTabContent[j].style.display="none";
+                }
+
+                for(var k=0; k<allTabButton.length; k++){
+                    allTabButton[k].classList.remove('active');
+                }
+
+                tabContent.style.display = "block";
+                this.classList.add('active');
+            });
+        }
+    </script>
+</body>
+</html>
