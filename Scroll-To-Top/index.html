@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Scroll-To-Top</title>
+   
+</head>
+<body>
+    <div class="head1">
+        <h2>This is heading-1</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, culpa nobis amet
+          necessitatibus velit dolorum minima commodi exercitationem!
+          Nesciunt totam sint voluptates sequi laudantium tempore? Dicta officiis sunt molestias ullam?</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, culpa nobis amet
+             necessitatibus velit dolorum minima commodi exercitationem!
+             Nesciunt totam sint voluptates sequi laudantium tempore? Dicta officiis sunt molestias ullam?</p>
+             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, culpa nobis amet
+                 necessitatibus velit dolorum minima commodi exercitationem!
+                 Nesciunt totam sint voluptates sequi laudantium tempore? Dicta officiis sunt molestias ullam?</p>
+                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, culpa nobis amet
+                     necessitatibus velit dolorum minima commodi exercitationem!
+                     Nesciunt totam sint voluptates sequi laudantium tempore? Dicta officiis sunt molestias ullam?</p>
+     </div>
+     <div class="head2">
+         <h2>This is heading-2</h2>
+         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, culpa nobis amet
+           necessitatibus velit dolorum minima commodi exercitationem!
+           Nesciunt totam sint voluptates sequi laudantium tempore? Dicta officiis sunt molestias ullam?</p>
+           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, culpa nobis amet
+             necessitatibus velit dolorum minima commodi exercitationem!
+             Nesciunt totam sint voluptates sequi laudantium tempore? Dicta officiis sunt molestias ullam?</p>
+             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, culpa nobis amet
+                 necessitatibus velit dolorum minima commodi exercitationem!
+                 Nesciunt totam sint voluptates sequi laudantium tempore? Dicta officiis sunt molestias ullam?</p>
+                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, culpa nobis amet
+                     necessitatibus velit dolorum minima commodi exercitationem!
+                     Nesciunt totam sint voluptates sequi laudantium tempore? Dicta officiis sunt molestias ullam?</p>
+      </div>
+
+      <div class="head3">
+        <h2>This is heading-3</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, culpa nobis amet
+          necessitatibus velit dolorum minima commodi exercitationem!
+          Nesciunt totam sint voluptates sequi laudantium tempore? Dicta officiis sunt molestias ullam?</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, culpa nobis amet
+            necessitatibus velit dolorum minima commodi exercitationem!
+            Nesciunt totam sint voluptates sequi laudantium tempore? Dicta officiis sunt molestias ullam?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, culpa nobis amet
+                necessitatibus velit dolorum minima commodi exercitationem!
+                Nesciunt totam sint voluptates sequi laudantium tempore? Dicta officiis sunt molestias ullam?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, culpa nobis amet
+                    necessitatibus velit dolorum minima commodi exercitationem!
+                    Nesciunt totam sint voluptates sequi laudantium tempore? Dicta officiis sunt molestias ullam?</p>
+                    <button class="scroll-top">Scroll-to-Top</button>
+     </div>
+    
+</body>
+    <script>
+        const scrollBtn = document.querySelector('.scroll-top');
+        window.addEventListener('scroll', () =>{
+            if(window.pageYOffset >300){
+                scrollBtn.style.display = "block";
+            }else{
+                scrollBtn.style.display = "none";
+            }
+        });
+
+        scrollBtn.addEventListener('click', ()=>{
+             window.scrollTo({
+                top:0,
+                behavior: "smooth"
+             });
+        });
+    </script>
+</html>
